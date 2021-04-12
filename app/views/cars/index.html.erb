@@ -41,3 +41,45 @@ Color : <input type="text" name="color"/>
 <br>
 
 <%= link_to 'New Car', new_car_path %>
+
+
+<hr/>
+<br>
+<div>Imprimo el objeto req y los parametros</div>
+<br>
+<%= request.inspect%>
+<br>
+Metodo y formato del request, a modo ejemplo
+<br>
+Modelo : <%= request.method%>
+Color : <%= request.format %>
+<br>
+<br>
+<%= params.inspect %>
+<br>
+<br>
+Objetos del Req!
+<br>
+Modelo : <%= request[:model] %>
+Color : <%= request[:color] %>
+<hr/>
+<br>
+Ahora Objeto Response
+<br>
+<%= response.inspect %>
+<br>
+<hr/>
+Aca no se como acceder al response.body ... Lo que logrue es RENDERIZAR, JSON en /owners, donde contiene la respuesta que recibe del controlador...
+<br>
+El render puede funcionar con muchos formatos y no esta limitado a HTML
+<hr/>
+Session inspect. 
+<br>
+<%= session.inspect %>
+<br>
+<br>
+<%= session[:name] %>
+<br>
+<br>
+<br>
+

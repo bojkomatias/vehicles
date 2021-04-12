@@ -4,6 +4,7 @@ class OwnersController < ApplicationController
   # GET /owners or /owners.json
   def index
     @owners = Owner.all
+    render json: @owners
   end
 
   # GET /owners/1 or /owners/1.json

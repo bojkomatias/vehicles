@@ -6,9 +6,7 @@ class CarsController < ApplicationController
     @cars = Car.all
     @cars = @cars.where(["model LIKE :model", :model => ("%" + params[:model] + "%")]) unless params[:model].blank?
     @cars = @cars.where(["color LIKE :color", :color => ("%" + params[:color] + "%")]) unless params[:color].blank?
-
   end
-
   # GET /cars/1 or /cars/1.json
   def show
   end
